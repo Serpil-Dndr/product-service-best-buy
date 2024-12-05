@@ -1,0 +1,105 @@
+### Get product service health
+GET /health  
+Host: localhost:3002
+
+### Get products
+GET /  
+Host: localhost:3002
+
+### Add product
+POST /  
+Host: localhost:3002  
+Content-Type: application/json
+
+```json
+{
+    {
+    "name": "Best Buy 55-inch 4K UHD TV",
+    "price": 499.99,
+    "description": "Enjoy stunning visuals and high definition with the Best Buy 55-inch 4K UHD TV. This television features crisp, vibrant images and an immersive viewing experience perfect for any living room.",
+    "image": "/tv-placeholder.png"
+}
+
+}
+```
+
+### Update product with too short of a description
+PUT /  
+Host: localhost:3002  
+Content-Type: application/json
+
+```json
+{
+    "id": 11,
+    "name": "Best Buy 55-inch 4K UHD TV",
+    "price": 499.99,
+    "description": "Great TV",
+    "image": "/tv-placeholder.png"
+}
+```
+
+### Update product with invalid price
+PUT /  
+Host: localhost:3002  
+Content-Type: application/json
+
+```json
+{
+    "id": 11,
+    "name": "Best Buy 55-inch 4K UHD TV",
+    "price": -499.99,
+    "description": "Enjoy stunning visuals and high definition with the Best Buy 55-inch 4K UHD TV. This television features crisp, vibrant images and an immersive viewing experience perfect for any living room.",
+    "image": "/tv-placeholder.png"
+}
+```
+
+### Update product
+PUT /  
+Host: localhost:3002  
+Content-Type: application/json
+
+```json
+{
+    "id": 11,
+    "name": "Best Buy 55-inch 4K UHD TV",
+    "price": 499.99,
+    "description": "Enjoy stunning visuals and high definition with the Best Buy 55-inch 4K UHD TV. This television features crisp, vibrant images and an immersive viewing experience perfect for any living room.",
+    "image": "/tv-placeholder.png"
+}
+```
+
+### Get product by id
+GET /11  
+Host: localhost:3002
+
+### Delete product by id
+DELETE /11  
+Host: localhost:3002
+
+### Get AI service health
+GET /ai/health  
+Host: localhost:3002
+
+### Get product description from AI service
+POST /ai/generate/description  
+Host: localhost:3002  
+Content-Type: application/json
+
+```json
+{
+    "name": "Best Buy Smart Fridge",
+    "tags": ["appliance", "fridge", "smart"]
+}
+```
+
+### Get product image from AI service
+POST /ai/generate/image  
+Host: localhost:3002  
+Content-Type: application/json
+
+```json
+{
+    "name": "Best Buy Smart Fridge",
+    "description": "Keep your food fresh and your kitchen modern with the Best Buy Smart Fridge. Featuring Wi-Fi connectivity and intuitive smart features, this fridge brings convenience and technology into your home."
+}
+```
