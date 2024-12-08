@@ -59,20 +59,7 @@ pub fn fetch_products(_settings: &Settings) -> Vec<Product> {
             description: "Protect your home with the Best Buy Home Security Camera. Featuring HD video, night vision, and motion detection, it ensures peace of mind whether you're at home or away.".to_string(),
             image: "/bestbuy-securitycamera.jpg".to_string()
         },
-        Product {
-            id: 9,
-            name: "Best Buy Electric Grill".to_string(),
-            price: 59.99,
-            description: "Grill your favorite foods indoors with the Best Buy Electric Grill. With adjustable temperature control and non-stick plates, it's perfect for cooking without the smoke and mess.".to_string(),
-            image: "/bestbuy-grill.jpg".to_string()
-        },
-        Product {
-            id: 10,
-            name: "Best Buy Cordless Vacuum Cleaner".to_string(),
-            price: 179.99,
-            description: "Keep your home spotless with the Best Buy Cordless Vacuum Cleaner. With powerful suction, long battery life, and a lightweight design, it makes cleaning effortless.".to_string(),
-            image: "/bestbuy-vacuum.jpg".to_string()
-        }
+
         
     ]
 }
